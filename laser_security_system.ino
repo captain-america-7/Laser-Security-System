@@ -19,14 +19,14 @@ void setup() {
   pinMode(D1,INPUT);
   delay(2000);
 
-Serial.begin(115200);
+  Serial.begin(115200);
 
- WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password);
   while (WiFi.status()!=WL_CONNECTED) {
     delay(1000);
     Serial.println("Connecting to WiFi...");
   }
-Serial.println("Connected to WiFi");
+  Serial.println("Connected to WiFi");
   ThingSpeak.begin(client);
   pinMode(pirPin, INPUT);
   pinMode(D1, OUTPUT);
